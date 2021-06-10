@@ -1,9 +1,9 @@
 package com.camille.clicker
 
 class Model (
-    var number: Int = 0
+    var name: String = "Имя"
 ) {
-    fun increase(): Int {
-        return ++number
+    fun submit(newName: String) {
+        this.name = newName
     }
 }

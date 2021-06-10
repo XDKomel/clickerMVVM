@@ -3,11 +3,11 @@ package com.camille.clicker
 import androidx.databinding.ObservableField
 
 class ViewModel (
-    var model: Model = Model(),
-    val numberString: ObservableField<String> = ObservableField("0")
+    val model: Model = Model(),
+    val nameText: ObservableField<String> = ObservableField(model.name)
 ) {
-    fun update() {
-        model.increase()
-        numberString.set(model.number.toString())
+    fun update(name: String) {
+        model.submit(name)
+        nameText.set("Здравствуйте, ${model.name}")
     }
 }
